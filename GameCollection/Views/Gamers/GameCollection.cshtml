@@ -1,0 +1,16 @@
+@model GameCollection.ViewModels.GamerGameCollection;
+<h1>Game Collection</h1>
+
+@* Display gamer ID. First Name, and Last Name from abstacted models  *@
+<h3>Gamer ID : @Model.Gamer.gamerID</h3>
+<h3>Gamer Name : @Model.Gamer.gamerFName @Model.Gamer.gamerLName</h3>
+
+@* Iterate through games form abstracted models using for each to display each games properties *@
+@foreach (VideoGame game in @Model.VideoGames)
+{
+    <p>Game ID : @game.videoGameID</p>
+    <p>Game Name : @game.videoGameName</p>
+    <p>Game Description : @game.videoGameDescription</p>
+    <p>Game Platfrom : @game.videoGamePlatform</p>
+    <br/>
+}
